@@ -18,6 +18,39 @@ export const HERO_STATS = [
   { value: "4.9", label: "Average rating" },
 ] as const;
 
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  initials: string;
+};
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    quote:
+      "Best courts in Tuscany, hands down. The glass is spotless and booking takes ten seconds. I'm here four times a week.",
+    name: "Giulia Ferri",
+    role: "Member since 2023",
+    initials: "GF",
+  },
+  {
+    quote:
+      "Went from never holding a racket to playing in the Sunday league in three months. The coaches are unreal.",
+    name: "Marco Bianchi",
+    role: "Beginner clinic graduate",
+    initials: "MB",
+  },
+  {
+    quote:
+      "The americano nights are the highlight of my week. Walked in knowing nobody, now I've got a whole crew.",
+    name: "Sofia Russo",
+    role: "League player",
+    initials: "SR",
+  },
+];
+
+export const PARTNERS = ["WPT", "Adidas", "Bullpadel", "Head", "Nox"] as const;
+
 export type Feature = {
   icon: "court" | "coach" | "community";
   title: string;
