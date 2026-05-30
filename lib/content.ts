@@ -51,6 +51,61 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const PARTNERS = ["WPT", "Adidas", "Bullpadel", "Head", "Nox"] as const;
 
+export type Plan = {
+  name: string;
+  tagline: string;
+  monthly: number;
+  annual: number; // per month, billed annually
+  features: string[];
+  cta: string;
+  popular?: boolean;
+};
+
+export const PLANS: Plan[] = [
+  {
+    name: "Off-Peak",
+    tagline: "Play when the court's quiet.",
+    monthly: 29,
+    annual: 24,
+    features: [
+      "Court access 7am–4pm weekdays",
+      "Online booking up to 3 days ahead",
+      "Free racket & ball loan",
+      "Member app & matchmaking",
+    ],
+    cta: "Start playing",
+  },
+  {
+    name: "Member",
+    tagline: "Everything, any time.",
+    monthly: 59,
+    annual: 49,
+    features: [
+      "Unlimited court access, all hours",
+      "Booking up to 14 days ahead",
+      "2 guest passes / month",
+      "10% off coaching & pro shop",
+      "Priority league entry",
+    ],
+    cta: "Become a member",
+    popular: true,
+  },
+  {
+    name: "Pro",
+    tagline: "For the seriously committed.",
+    monthly: 99,
+    annual: 85,
+    features: [
+      "All Member benefits",
+      "4 hrs private coaching / month",
+      "Video analysis sessions",
+      "Free guest passes",
+      "Tournament fee waivers",
+    ],
+    cta: "Go Pro",
+  },
+];
+
 export type Feature = {
   icon: "court" | "coach" | "community";
   title: string;

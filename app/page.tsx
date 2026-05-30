@@ -2,6 +2,7 @@ import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
 import { Features } from "@/components/sections/features";
 import { SocialProof } from "@/components/sections/social-proof";
+import { Pricing } from "@/components/sections/pricing";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
         <Hero />
         <Features />
         <SocialProof />
-        {/* Sections to follow: Pricing · FAQ · Footer */}
+        <Pricing />
+        {/* Sections to follow: FAQ · Footer */}
       </main>
     </>
   );
