@@ -8,3 +8,6 @@ npm-debug.log*
 # Environment
 .env
 .env.local
+.next/
+next-env.d.ts
+.DS_Store

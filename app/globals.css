@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens (semantic layer) expressed as HSL channels so Tailwind's
+ * <alpha-value> opacity modifiers work. Primitive values come from the
+ * design-system token scale; the brand layer is the Real Padel extension
+ * (emerald court-green + lime accent + Florentine amber).
+ */
+:root {
+  /* semantic */
+  --background: 0 0% 100%;
+  --foreground: 160 35% 9%;
+  --muted: 150 20% 96%;
+  --muted-foreground: 155 8% 42%;
+  --border: 150 16% 90%;
+  --ring: 160 84% 39%;
+
+  /* brand: emerald */
+  --brand-50: 152 81% 96%;
+  --brand-100: 149 80% 90%;
+  --brand-200: 152 76% 80%;
+  --brand-400: 158 64% 52%;
+  --brand-500: 160 84% 39%;
+  --brand-600: 161 94% 30%;
+  --brand-700: 163 90% 24%;
+  --brand-900: 164 86% 14%;
+  --brand-950: 166 91% 9%;
+
+  /* accents */
+  --accent: 80 85% 67%;   /* lime court-line */
+  --amber: 38 92% 50%;    /* Florentine warm */
+  --ink: 160 38% 7%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect users who prefer reduced motion: kill non-essential animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle padel-court grid used in the hero background. */
+.bg-court-grid {
+  background-image: linear-gradient(
+      to right,
+      hsl(var(--brand-500) / 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, hsl(var(--brand-500) / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
