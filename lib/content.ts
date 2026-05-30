@@ -51,6 +51,35 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const PARTNERS = ["WPT", "Adidas", "Bullpadel", "Head", "Nox"] as const;
 
+export type Faq = { q: string; a: string };
+
+export const FAQS: Faq[] = [
+  {
+    q: "Do I need to be a member to play?",
+    a: "Not at all. Anyone can book a court as a pay-as-you-go guest. Membership just unlocks better rates, priority booking and perks.",
+  },
+  {
+    q: "I've never played padel — can I still come?",
+    a: "Absolutely. Padel is the easiest racket sport to pick up. Book a beginner clinic or a 'first hit' session and our coaches will have you rallying in your first hour.",
+  },
+  {
+    q: "Can I rent equipment?",
+    a: "Yes. Rackets and balls are free to borrow for members and a few euros for guests. The pro shop also stocks the latest gear if you catch the bug.",
+  },
+  {
+    q: "How far ahead can I book?",
+    a: "Guests can book up to 3 days ahead, Members 14 days, and Pro members get priority slots. Everything is handled in the member app in a few taps.",
+  },
+  {
+    q: "Are the courts indoor or outdoor?",
+    a: "Both. Four climate-controlled indoor courts for any weather, and four panoramic outdoor courts for when Florence turns on the sunshine.",
+  },
+  {
+    q: "Where are you located?",
+    a: "A short ride from the city centre with free parking on site. Full directions and public-transport options are on the contact page.",
+  },
+];
+
 export type Plan = {
   name: string;
   tagline: string;
