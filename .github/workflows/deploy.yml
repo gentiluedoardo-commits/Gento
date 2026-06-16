@@ -29,12 +29,12 @@ jobs:
           node-version: 20
           cache: npm
 
-      # Enables Pages on first run and exposes the sub-path the site is served from.
+      # Reads the Pages config (sub-path etc.). Pages must already be enabled
+      # in Settings -> Pages -> Source: "GitHub Actions" (the default token
+      # cannot create the Pages site itself).
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Install dependencies
         run: npm ci
